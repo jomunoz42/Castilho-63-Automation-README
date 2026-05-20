@@ -10,11 +10,11 @@
 
 </div>
 
-A Python automation pipeline built to streamline daily hostel operations at **Castilho Hostel & Suites 63**.
+I have built a Python automation pipeline to streamline daily hostel operations at **Castilho Hostel & Suites 63**.
 
 This project was developed to solve real operational problems in a live hospitality environment, automating repetitive workflows related to reservations, breakfast lists, city tax processing, door code generation, Word document creation, VCF contact generation, and WhatsApp guest communication.
 
-The system is currently used internally and was designed with a practical goal: reduce manual workload, avoid human errors, and make daily operations faster and more reliable.
+The system is currently used internally and was designed with a practical goal: reduce manual workload, avoid human errors, and make daily operations way faster and more reliable.
 
 ---
 
@@ -22,9 +22,9 @@ The system is currently used internally and was designed with a practical goal: 
 
 Hostel operations involve several repetitive daily tasks:
 
-- Exporting reservation data from the PMS
-- Preparing breakfast lists
-- Preparing city tax lists
+- Exporting reservation data from the Ynnov platform
+- Preparing breakfast list
+- Preparing city tax list
 - Creating access codes for guests
 - Filling printed code sheets
 - Registering WhatsApp contacts
@@ -42,13 +42,13 @@ This pipeline automates the full process from raw reservation exports to printed
 The automation reduced a workflow that previously took approximately:
 
 - **1h30 of concentrated work for me**
-- **up to 3h for a less computer-experienced person**
+- **Up to 3h for a less computer-experienced person**
 
 to approximately:
 
 - **8 minutes of automated execution**
 
-while improving reliability and reducing manual errors.
+While improving reliability and reducing manual errors.
 
 ---
 
@@ -56,7 +56,7 @@ while improving reliability and reducing manual errors.
 
 This was not a school project or tutorial.
 
-It was built because there was a real operational need inside a working business. The project required understanding the hostel workflow, identifying bottlenecks, designing a reliable automation process, and improving it incrementally as real-world issues appeared.
+It was built because there was a real operational need inside a working business. The project required understanding deeply the hostel workflow, identifying bottlenecks, designing a reliable automation process, and improving it incrementally as real-world issues appeared.
 
 The main focus was not overengineering, but building something that works consistently in daily usage.
 
@@ -137,11 +137,11 @@ After the list is generated, it is printed automatically.
 
 The tax list is generated from reservation data and contains:
 
-- guest names
-- dates
-- tax values to be paid
+- Guest names
+- Dates
+- Tax values to be paid
 - Booking reservation ID
-- property associated with the reservation
+- Property associated with the reservation
 
 The final result is prepared in a format suitable for operational usage and tracking.
 
@@ -159,18 +159,18 @@ The heart of the pipeline is the access code automation.
 
 Starting from a copied `.xlsx` file, the system parses the reservation data to extract and normalize:
 
-- guest first name
-- number of nights
-- room name in a presentable format
-- reservation grouping information
+- Guest first name
+- Number of nights
+- Room name in a presentable format
+- Reservation grouping information
 
 The automation then groups guests by number of nights and creates a shared **street door code** for each group.
 
 After that, it processes each reservation individually and creates a specific **room code** for each guest, with:
 
-- the correct number of nights
-- the correct room
-- the correct guest assignment
+- The correct number of nights
+- The correct room
+- The correct guest assignment
 
 This is one of the most important parts of the system because creating a single guest code manually requires around **50 clicks and/or key presses**.
 
@@ -220,7 +220,7 @@ From another copy of the reservation file, the automation extracts the guests as
 
 It then creates a `.vcf` contact file containing all required guest contacts.
 
-The file is sent to my own WhatsApp, opened on the phone, and imported directly into the contacts list.
+The file is sent to the Hostel's WhatsApp, opened on the phone, and imported directly into the contacts list.
 
 This allows multiple guest contacts to be created almost instantly instead of manually registering each one.
 
@@ -274,13 +274,13 @@ This approach was important because the project is used in a real operational en
 
 Several parts of the pipeline depend on browser automation. This required handling:
 
-- dynamic pages
-- loading delays
-- unreliable selectors
-- login states
-- external service behavior
-- explicit waits
-- browser session stability
+- Dynamic pages
+- Loading delays
+- Unreliable selectors
+- Login states
+- External service behavior
+- Explicit waits
+- Browser session stability
 
 The project prioritizes stable selectors and explicit waits instead of relying on arbitrary sleeps.
 
@@ -293,12 +293,12 @@ Reservation exports contain data that needs to be cleaned, filtered, converted, 
 The automation handles:
 
 - `.xls` to `.xlsx` conversion
-- duplicated files for different workflows
-- row deletion based on keywords
-- stale row issues after deletion
-- guest filtering
-- reservation grouping
-- formatted operational outputs
+- Duplicated files for different workflows
+- Row deletion based on keywords
+- Stale row issues after deletion
+- Guest filtering
+- Reservation grouping
+- Formatted operational outputs
 
 ---
 
@@ -318,13 +318,13 @@ A major challenge was not only writing code, but understanding the actual hostel
 
 The system had to match the way the team works, including:
 
-- printed documents
-- existing templates
+- Printed documents
+- Existing templates
 - WhatsApp habits
 - PMS exports
-- access code systems
-- remote check-in workflow
-- manual fallback needs
+- Access code systems
+- Remote check-in workflow
+- Manual fallback needs
 
 ---
 
@@ -332,16 +332,16 @@ The system had to match the way the team works, including:
 
 This project strengthened my understanding of:
 
-- automation design
+- Automation design
 - Python scripting
-- browser automation with Selenium
+- Browser automation with Selenium
 - Excel processing with openpyxl
-- file generation and cleanup
-- operational reliability
-- debugging real-world systems
-- error handling and recovery
-- workflow analysis
-- incremental software improvement
+- File generation and cleanup
+- Operational reliability
+- Debugging real-world systems
+- Error handling and recovery
+- Workflow analysis
+- Incremental software improvement
 
 Most importantly, it showed me how software can directly solve operational problems and create measurable value in a real environment.
 

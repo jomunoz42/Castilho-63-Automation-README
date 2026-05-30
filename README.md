@@ -267,24 +267,6 @@ This approach was important because the project is used in a real operational en
 
 ---
 
-## 🧩 Main Technical Challenges
-
-### Selenium Reliability
-
-Several parts of the pipeline depend on browser automation. This required handling:
-
-- Dynamic pages
-- Loading delays
-- Unreliable selectors
-- Login states
-- External service behavior
-- Explicit waits
-- Browser session stability
-
-The project prioritizes stable selectors and explicit waits instead of relying on arbitrary sleeps.
-
----
-
 ### Excel Parsing and Data Cleaning
 
 Reservation exports contain data that needs to be cleaned, filtered, converted, and reorganized.
